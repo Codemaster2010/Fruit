@@ -1,0 +1,39 @@
+from tkinter import *
+root=Tk()
+root.title("Dictionary")
+root.geometry("600x400")
+
+label_of_apple = Label(root)
+label_of_banana = Label(root)
+label_of_cantolope = Label(root)
+
+
+dictionary = {'Apple': 'Red friut',
+              'Banana': 'Yellow fruit',
+              'Cantalope': 'Green fruit'}
+
+def apple():
+    label_of_apple["text"] = dictionary['Apple']
+    
+def banana():
+    label_of_banana["text"] = dictionary['Banana']
+    
+def cantalope():
+    label_of_cantalope ["text"] = dictionary['Cantalope']
+    
+button_apple= Button(root , text = "Meaning of Apple", command = apple)
+button_apple.place(relx = 0.5, rely =0.2, anchor = CENTER)
+
+label_of_apple.place(relx = 0.5, rely =0.3, anchor = CENTER)
+
+button_banana = Button(root, text = "Meaning of Banana", command = banana)
+button_banana.place(relx = 0.5, rely =0.4, anchor = CENTER)
+
+label_of_banana.place(relx = 0.5, rely =0.5, anchor = CENTER)
+
+button_cantalope = Button(root, text = "Meaning of Cantalope", command = cantalope)
+button_cantalope.place(relx = 0.5, rely =0.6, anchor = CENTER)
+
+label_of_cantolope.place(relx = 0.5, rely =0.7, anchor = CENTER)
+
+root.mainloop()
